@@ -71,6 +71,7 @@ namespace Crossdock
             return WService.SqlToJSON("EXEC GetActiveShipments");
         }
 
+        [WebMethod]
         public string GetDispatchedShipments()
         {
             return WService.SqlToJSON("EXEC GetDispatchedShipments");
