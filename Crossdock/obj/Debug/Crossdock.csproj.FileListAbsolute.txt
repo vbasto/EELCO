@@ -1,0 +1,8 @@
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\Crossdock\bin\ApplicationInsights.config
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\Crossdock\bin\Crossdock.dll.config
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\Crossdock\bin\Crossdock.dll
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\Crossdock\bin\Crossdock.pdb
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\Crossdock\obj\Debug\Crossdock.csproj.App.config
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\Crossdock\obj\Debug\Crossdock.csprojResolveAssemblyReference.cache
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\Crossdock\obj\Debug\Crossdock.dll
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\Crossdock\obj\Debug\Crossdock.pdb

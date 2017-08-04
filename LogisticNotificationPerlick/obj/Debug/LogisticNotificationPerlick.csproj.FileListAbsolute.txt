@@ -1,0 +1,7 @@
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticNotificationPerlick\bin\Debug\LogisticNotificationPerlick.exe.config
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticNotificationPerlick\bin\Debug\LogisticNotificationPerlick.exe
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticNotificationPerlick\bin\Debug\LogisticNotificationPerlick.pdb
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticNotificationPerlick\bin\Debug\itextsharp.dll
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticNotificationPerlick\obj\Debug\LogisticNotificationPerlick.csprojResolveAssemblyReference.cache
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticNotificationPerlick\obj\Debug\LogisticNotificationPerlick.exe
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticNotificationPerlick\obj\Debug\LogisticNotificationPerlick.pdb

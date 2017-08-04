@@ -1,0 +1,6 @@
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PerlickManifest\bin\Debug\PerlickManifest.exe.config
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PerlickManifest\bin\Debug\PerlickManifest.exe
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PerlickManifest\bin\Debug\PerlickManifest.pdb
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PerlickManifest\obj\Debug\PerlickManifest.exe
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PerlickManifest\obj\Debug\PerlickManifest.pdb
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PerlickManifest\obj\Debug\PerlickManifest.csprojResolveAssemblyReference.cache

@@ -1,0 +1,8 @@
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticsNotification\obj\Debug\LogisticsNotification.csprojResolveAssemblyReference.cache
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticsNotification\bin\Debug\LogisticsNotification.exe.config
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticsNotification\bin\Debug\LogisticsNotification.exe
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticsNotification\bin\Debug\LogisticsNotification.pdb
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticsNotification\obj\Debug\LogisticsNotification.exe
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticsNotification\obj\Debug\LogisticsNotification.pdb
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticsNotification\bin\Debug\System.Net.Http.dll
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\LogisticsNotification\bin\Debug\System.Net.Http.xml

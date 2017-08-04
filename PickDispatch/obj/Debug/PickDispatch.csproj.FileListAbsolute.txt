@@ -1,0 +1,8 @@
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PickDispatch\bin\ApplicationInsights.config
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PickDispatch\bin\PickDispatch.dll.config
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PickDispatch\bin\PickDispatch.dll
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PickDispatch\bin\PickDispatch.pdb
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PickDispatch\obj\Debug\PickDispatch.csproj.App.config
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PickDispatch\obj\Debug\PickDispatch.csprojResolveAssemblyReference.cache
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PickDispatch\obj\Debug\PickDispatch.dll
+C:\Users\victo\OneDrive\GAV\Clientes\EELCO\Soluciones\EELCO\PickDispatch\obj\Debug\PickDispatch.pdb
