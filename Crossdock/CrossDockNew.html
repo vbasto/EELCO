@@ -1,0 +1,740 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAV | EELCONET</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="mini-navbar">
+
+    <div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-rounded img-md" src="img/a4.jpg" />
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Gabriel Espinoza</strong>
+                             </span> <span class="text-muted text-xs block">DC Supervisor <b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <!--<li><a href="profile.html">Profile</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li class="divider"></li>-->
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        GAV
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-list-alt"></i> <span class="nav-label">Catalogs</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="#">Carriers</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Equipment Type</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Transfers</a></li>
+                        <li><a href="#">Yards</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+
+        </div>
+    </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+        </div>
+            <div class="navbar-header" style="padding-left:10px">
+                <h2 style="color:#383D49;margin-top:16px;font-size:22px;font-family:Sans-serif">EELCONET</h2>
+            </div>
+            <div class="navbar-header" style="padding-left:20px;padding-top:15px">
+                <div class="btn-group">
+                    <!--<button data-toggle="dropdown" class="btn btn-primary btn-outline btn-sm dropdown-toggle">WHSE 1 <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">WHSE 1</a></li>
+                        <li><a href="#">WHSE 2</a></li>
+                    </ul>-->
+                </div>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-primary">0</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <!--<li>
+                            <a href="grid_options.html">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Movement Request #5566 
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>-->
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="notifications.html">
+                                    <strong>See All Notifications</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        </div>
+
+        <div class="wrapper wrapper-content">
+            <div id="iboxMenu" class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5 id="divLabel">Crossdock Shipments</h5>
+
+                                <div class="ibox-tools">
+                                    <button id="mnuNuevo" style="margin-left:10px" class="btn btn-xs btn-primary hidden" type="button"><i class="fa fa-truck"></i>&nbsp;&nbsp;<span class="bold">New Shipment</span></button>
+                                    <button id="mnuGuardar" style="margin-left:10px" class="btn btn-xs btn-primary" type="button"><i class="fa fa-floppy-o"></i>&nbsp;&nbsp;<span class="bold">Save</span></button>
+                                    <button id="mnuCancelar" style="margin-left:10px" class="btn btn-xs btn-danger" type="button"><i class="fa fa-ban"></i>&nbsp;&nbsp;<span class="bold">Close</span></button>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="iboxContent" class="row">
+
+                <div class="col-lg-12">
+                    <div id="iboxActiveShipments" class="ibox float-e-margins hidden">
+                        <div class="ibox-title">
+                            <h5>Active Shipments (4)</h5>
+                            <div class="ibox-tools">
+                                <button id="mnuNuevo" style="margin-right:10px" class="btn btn-xs btn-primary hidden" type="button"><i class="fa fa-plus"></i>&nbsp;&nbsp;<span class="bold">Add Order</span></button>
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="">
+                                <div class="row form-group">
+                                    <div class="col-lg-12">
+                                        <table class="table table-hover no-margins">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:30px"></th>
+                                                    <th>ShipmentID</th>
+                                                    <th>Customer</th>
+                                                    <th>Reference</th>
+                                                    <th>Equipment(TU)</th>
+                                                    <th>Carrier(TU)</th>
+                                                    <th>Packages</th>
+                                                    <th>ArrivalDate</th>
+                                                    <th>Equipment(TL)</th>
+                                                    <th>Carrier(TL)</th>
+                                                    <th>CheckIn</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><i class="fa fa-pencil pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                    <td class="text-important">PAN1700004</td>
+                                                    <td>PANTHER LOGISTICS</td>
+                                                    <td>TR5255237</td>
+                                                    <td>510054</td>
+                                                    <td>TRANSPORTES FEMA</td>
+                                                    <td>32</td>
+                                                    <td></td>
+                                                    <td>6654</td>
+                                                    <td>LANDSTAR</td>
+                                                    <td></td>
+                                                    <td>IN TRANSIT</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fa fa-pencil pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                    <td class="text-important">PAN1700003</td>
+                                                    <td>PANTHER LOGISTICS</td>
+                                                    <td>TR5255240</td>
+                                                    <td>24086</td>
+                                                    <td>MONRO</td>
+                                                    <td>32</td>
+                                                    <td></td>
+                                                    <td>6026</td>
+                                                    <td>SWIFT</td>
+                                                    <td>06/09/2017 15:20</td>
+                                                    <td>IN TRANSIT</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fa fa-pencil pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                    <td class="text-important">PAN1700002</td>
+                                                    <td>PANTHER LOGISTICS</td>
+                                                    <td>TR5255241</td>
+                                                    <td>53120</td>
+                                                    <td>XPRESS</td>
+                                                    <td>32</td>
+                                                    <td>06/09/2017 15:20</td>
+                                                    <td>9523</td>
+                                                    <td>MESILLA</td>
+                                                    <td></td>
+                                                    <td>AT YARD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fa fa-pencil pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                    <td class="text-important">PAN1700001</td>
+                                                    <td>PANTHER LOGISTICS</td>
+                                                    <td>TR5255243</td>
+                                                    <td>97910</td>
+                                                    <td>TRUCKA</td>
+                                                    <td>32</td>
+                                                    <td>06/09/2017 14:36</td>
+                                                    <td>2595</td>
+                                                    <td>GALAXY TRANSIT</td>
+                                                    <td>06/09/2017 15:20</td>
+                                                    <td>LOADING</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div id="iboxDispatchedShipments" class="ibox float-e-margins hidden">
+                        <div class="ibox-title">
+                            <h5>Dispatched</h5>
+                            <div class="ibox-tools">
+                                <button id="mnuNuevo" style="margin-right:10px" class="btn btn-xs btn-primary hidden" type="button"><i class="fa fa-plus"></i>&nbsp;&nbsp;<span class="bold">Add Order</span></button>
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="">
+                                <div class="row form-group">
+                                    <div class="col-lg-12">
+                                        <table class="table table-hover no-margins">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:30px"></th>
+                                                    <th>ShipmentID</th>
+                                                    <th>Customer</th>
+                                                    <th>Reference</th>
+                                                    <th>Equipment(TU)</th>
+                                                    <th>Carrier(TU)</th>
+                                                    <th>Packages</th>
+                                                    <th>ArrivalDate</th>
+                                                    <th>Equipment(TL)</th>
+                                                    <th>Carrier(TL)</th>
+                                                    <th>CheckIn</th>
+                                                    <th>Loading Time</th>
+                                                    <th>CheckOut</th>
+                                                    <th>Seal</th>
+                                                    <th style="width:30px">POD</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><i class="fa fa-pencil pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                    <td class="text-important">PAN1700005</td>
+                                                    <td>PANTHER LOGISTICS</td>
+                                                    <td>TR5255237</td>
+                                                    <td>510054</td>
+                                                    <td>TRANSPORTES FEMA</td>
+                                                    <td>32</td>
+                                                    <td>06/10/2017 10:31</td>
+                                                    <td>6654</td>
+                                                    <td>LANDSTAR</td>
+                                                    <td>06/10/2017 10:29</td>
+                                                    <td>10:35 - 11:05</td>
+                                                    <td>06/10/2017 11:08</td>
+                                                    <td>CEM8272663</td>
+                                                    <td><i class="fa fa-file pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fa fa-pencil pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                    <td class="text-important">PAN1700006</td>
+                                                    <td>PANTHER LOGISTICS</td>
+                                                    <td>TR5255237</td>
+                                                    <td>510054</td>
+                                                    <td>TRANSPORTES FEMA</td>
+                                                    <td>32</td>
+                                                    <td>06/10/2017 10:31</td>
+                                                    <td>6654</td>
+                                                    <td>LANDSTAR</td>
+                                                    <td>06/10/2017 10:29</td>
+                                                    <td>10:35 - 11:05</td>
+                                                    <td>06/10/2017 11:08</td>
+                                                    <td>CEM8272663</td>
+                                                    <td><i class="fa fa-file pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fa fa-pencil pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                    <td class="text-important">PAN1700007</td>
+                                                    <td>PANTHER LOGISTICS</td>
+                                                    <td>TR5255237</td>
+                                                    <td>510054</td>
+                                                    <td>TRANSPORTES FEMA</td>
+                                                    <td>32</td>
+                                                    <td>06/10/2017 10:31</td>
+                                                    <td>6654</td>
+                                                    <td>LANDSTAR</td>
+                                                    <td>06/10/2017 10:29</td>
+                                                    <td>10:35 - 11:05</td>
+                                                    <td>06/10/2017 11:08</td>
+                                                    <td>CEM8272663</td>
+                                                    <td><i class="fa fa-file pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fa fa-pencil pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                    <td class="text-important">PAN1700008</td>
+                                                    <td>PANTHER LOGISTICS</td>
+                                                    <td>TR5255237</td>
+                                                    <td>510054</td>
+                                                    <td>TRANSPORTES FEMA</td>
+                                                    <td>32</td>
+                                                    <td>06/10/2017 10:31</td>
+                                                    <td>6654</td>
+                                                    <td>LANDSTAR</td>
+                                                    <td>06/10/2017 10:29</td>
+                                                    <td>10:35 - 11:05</td>
+                                                    <td>06/10/2017 11:08</td>
+                                                    <td>CEM8272663</td>
+                                                    <td><i class="fa fa-file pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><i class="fa fa-pencil pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                    <td class="text-important">PAN1700009</td>
+                                                    <td>PANTHER LOGISTICS</td>
+                                                    <td>TR5255237</td>
+                                                    <td>510054</td>
+                                                    <td>TRANSPORTES FEMA</td>
+                                                    <td>32</td>
+                                                    <td>06/10/2017 10:31</td>
+                                                    <td>6654</td>
+                                                    <td>LANDSTAR</td>
+                                                    <td>06/10/2017 10:29</td>
+                                                    <td>10:35 - 11:05</td>
+                                                    <td>06/10/2017 11:08</td>
+                                                    <td>CEM8272663</td>
+                                                    <td><i class="fa fa-file pointer text-navy" onclick='EditarOrden(-1899912729)'></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 ">
+                    <div id="iboxNewShiment" class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Shipment Information</h5>
+			    <!--
+                            <div class="ibox-tools">
+                                <button id="mnuUploadFile" style="margin-right:15px" class="btn btn-xs btn-primary" type="button"><i class="fa fa-upload"></i>&nbsp;&nbsp;<span class="bold">Upload</span></button>
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </div>-->
+                        </div>
+                        <div class="ibox-content">
+                            <div class="">
+                                <div class="row form-group">
+                                    <div class="col-lg-1">
+                                        <label class="control-label"><small>Shipment ID:</small></label>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <input id="txtReceiptNo" type="text" readonly class="form-control input-xs text-important" tabindex="2" />
+                                    </div>
+                                    <div class="col-lg-1 text-right">
+                                        <label class="control-label"><small>Status:</small></label>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <select id="ddlEquipment" class="form-control input-xs" style="font-weight:bold">
+                                            <option selected="selected" value="2">IN TRANSIT</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-1 text-right">
+                                        <label class="control-label"><small>C. Reference:</small></label>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <input id="txtCReference" type="text" class="form-control input-xs" tabindex="2" maxlength="20" />
+                                    </div>
+                                    <div class="col-lg-1 text-right">
+                                        <label class="control-label"><small>Customer:</small></label>
+                                    </div>
+                                    <div class="col-lg-2">
+					<select id="ddlCustomer" class="form-control input-xs" style="font-weight:bold">
+                                            <option selected="selected" value="1">PANTHER LOGISTICS</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="row form-group hidden">
+                                    <div class="col-lg-1 ">
+                                        <label class="control-label"><small>Customer:&nbsp;</small></label>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <div class="input-group" style="width:100%; display:block">
+                                            <!--<span id="spPrefijoCliente" class="input-group-addon input-xs" style="width:50px"></span>-->
+                                            <input type="text" id="txtPrefijoCliente" class="form-control input-xs" style="width:10%; display:inline" />
+                                            <input type="text" id="txtCliente" class="form-control input-xs" style="width:90%;display:inline" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-lg-1">
+                                        <label class="control-label"><small>Equipment TU:</small></label>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <input id="txtEquipmentNo" type="text" class="form-control input-xs" tabindex="2" placeholder="Trailer #" maxlength="20"/>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input id="txtOwner" type="text" class="form-control input-xs" tabindex="2" placeholder="Carrier Name" maxlength="20"/>
+                                    </div>
+                                    <div class="col-lg-1 text-right">
+                                        <label class="control-label"><small>Equipment Type:</small></label>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <select id="ddlEquipment" class="form-control input-xs" style="font-weight:bold">
+                                            <option value="1">DRY VAN 53'</option>
+                                            <option selected="selected" value="2">STEPDECK</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-1 text-right">
+                                        <label class="control-label"><small>Receipt Type:</small></label>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <select id="ddlEquipment" class="form-control input-xs" style="font-weight:bold">
+                                            <option selected="selected" value="3">CROSSDOCK</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-lg-1">
+                                        <label class="control-label"><small>Packages:</small></label>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <input id="txtPackages" type="text" class="form-control input-xs" tabindex="2" />
+                                    </div>
+                                    <div class="col-lg-1 text-right">
+                                        <label class="control-label"><small>Gross Weight:</small></label>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="input-group">
+                                            <input type="text" id="txtPesoLBS" placeholder="0.00000" class="form-control input-xs" style="text-align: right" tabindex="-1" />
+                                            <span class="input-group-addon" style="border:1px solid #969595;padding-bottom:0;padding-top:0;border-left:none">LBS</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-lg-1">
+                                        <label class="control-label"><small>Equipment TL:</small></label>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <input id="txtEquipmentNoTL" type="text" class="form-control input-xs" tabindex="2" placeholder="Trailer #" maxlength="20" />
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <input id="txtCarrierTL" type="text" class="form-control input-xs" tabindex="2" placeholder="Carrier Name" maxlength="20"/>
+                                    </div>
+
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-lg-1">
+                                        <label class="control-label"><small>Remarks:</small></label>
+                                    </div>
+                                    <div class="col-lg-11">
+                                        <textarea id="txtObservaciones" class="form-control input-xs" spellcheck="false" style="resize:none;height:42px" tabindex="7" maxlength="300"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		
+<!--
+                <div class="col-lg-6">
+
+                    <div id="iboxFiles" class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Files</h5>
+                            <div class="ibox-tools">
+                                
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <input type="file" id="file" name="file" multiple="multiple" class="hidden" style="" />
+                            <table class="table table-hover no-margins">
+                                <thead>
+                                    <tr>
+                                        <th>Open</th>
+                                        <th>Description</th>
+                                        <th>Type</th>
+                                        <th>Uploaded Date</th>
+                                        <th>Uploaded By</th>
+                                        <th>Party</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fa fa-file-o pointer text-success" onclick='AbrirPdf(-1899912729)'></i></td>
+                                        <td class="text-navy">BOL</td>
+                                        <td>Pdf</td>
+                                        <td>04/24/2017 11:00 am</td>
+                                        <td>DAVID GAMEZ</td>
+                                        <td>Customer</td>
+                                        <td><i class="fa fa-trash-o pointer"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa fa-file-o pointer text-success" onclick='AbrirPdf(-1899912729)'></i></td>
+                                        <td class="text-navy">BOL</td>
+                                        <td>Pdf</td>
+                                        <td>04/24/2017 11:00 am</td>
+                                        <td>DAVID GAMEZ</td>
+                                        <td>Customer</td>
+                                        <td><i class="fa fa-trash-o pointer"></i></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div id="iboxPictures" class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Pictures</h5>
+                            <div class="ibox-tools">
+                                
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div>
+
+                                <div id="links" class="lightBoxGallery" style="text-align:left;">
+                                    <a href="img/gallery/2.jpg" title="Picture" data-gallery=""><img src="img/gallery/2s.jpg"></a>
+                                    <a href="img/gallery/3.jpg" title="Picture" data-gallery=""><img src="img/gallery/3s.jpg"></a>
+                                    <a href="img/gallery/4.jpg" title="Picture" data-gallery=""><img src="img/gallery/4s.jpg"></a>
+                                    <a href="img/gallery/5.jpg" title="Picture" data-gallery=""><img src="img/gallery/5s.jpg"></a>
+                                    <a href="img/gallery/6.jpg" title="Picture" data-gallery=""><img src="img/gallery/6s.jpg"></a>
+
+                                    <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+                                    <div id="blueimp-gallery" class="blueimp-gallery">
+                                        <div class="slides"></div>
+                                        <h3 class="title"></h3>
+                                        <a class="prev">‹</a>
+                                        <a class="next">›</a>
+                                        <a class="close">×</a>
+                                        <a class="play-pause"></a>
+                                        <ol class="indicator"></ol>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+-->
+
+
+        </div>
+
+            <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content animated bounceInRight">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <i class="fa fa-file modal-icon"></i>
+                            <h4 class="modal-title">Upload Files</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-hover no-margins">
+                                <thead>
+                                    <tr>
+                                        <th>File</th>
+                                        <th>Description</th>
+                                        <th>Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bol.pdf</td>
+                                        <td><input type="email" placeholder="Enter Description" class="form-control"></td>
+                                        <td>Pdf</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bol2.pdf</td>
+                                        <td><input type="email" placeholder="Enter Description" class="form-control"></td>
+                                        <td>Pdf</td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary">Upload</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal inmodal" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content animated bounceInRight">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title">Equipment In Yard</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-hover no-margins">
+                                <thead>
+                                    <tr>
+                                        <th>Equipment #</th>
+                                        <th>Carrier</th>
+                                        <th>Arrival</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>510054</td>
+                                        <td>FEMA</td>
+                                        <td>04/24/2017 10:55 AM</td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="openModal" type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#myModal">
+                FlipInY effect
+            </button>
+            <button id="openModal2" type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#myModal2">
+                FlipInY effect
+            </button>
+
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> GAV &copy;2017
+            </div>
+        </div>
+
+        </div>
+        </div>
+    </div>
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <script src="js/plugins/dataTables/datatables.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/ladda/spin.min.js"></script>
+    <script src="js/plugins/ladda/ladda.min.js"></script>
+    <script src="js/plugins/ladda/ladda.jquery.min.js"></script>
+
+    <!-- blueimp gallery -->
+    <script src="js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function(){
+            $('.dataTables-example').DataTable({
+                pageLength: 25,
+                responsive: true,
+                searching: true,
+                ordering: true,
+                info: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                    { extend: 'excel', title: 'ExampleFile' }
+                ]
+            });
+
+            //$('.dataTables_info').css('display', 'none');
+        });
+
+
+
+       
+
+    </script>
+
+    <script src="js/ASN.js"></script>
+
+</body>
+
+</html>

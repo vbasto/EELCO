@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reporteador", "Reporteador\Reporteador.csproj", "{A6133115-1E4A-43D5-8044-D789A59E3C60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerlickManifest", "PerlickManifest\PerlickManifest.csproj", "{F7F8B757-8777-49EF-B882-C80001D78AFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerlickManifestWeb", "PerlickManifestWeb\PerlickManifestWeb.csproj", "{B7F0E9D5-36D6-4B76-B669-BB1A12A70569}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticsNotification", "LogisticsNotification\LogisticsNotification.csproj", "{73D850A5-BC7E-4943-AD95-C91D8CDDC642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticNotificationPerlick", "LogisticNotificationPerlick\LogisticNotificationPerlick.csproj", "{294C5F00-CA60-4E29-86C7-1D7C28E62B87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickDispatch", "PickDispatch\PickDispatch.csproj", "{D81676BD-F3DE-4AFB-AB1A-004FC368CFB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crossdock", "Crossdock\Crossdock.csproj", "{05A824B1-B82B-4106-AEB9-5A5065C5F8FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6133115-1E4A-43D5-8044-D789A59E3C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6133115-1E4A-43D5-8044-D789A59E3C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6133115-1E4A-43D5-8044-D789A59E3C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6133115-1E4A-43D5-8044-D789A59E3C60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7F8B757-8777-49EF-B882-C80001D78AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7F8B757-8777-49EF-B882-C80001D78AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7F8B757-8777-49EF-B882-C80001D78AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7F8B757-8777-49EF-B882-C80001D78AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7F0E9D5-36D6-4B76-B669-BB1A12A70569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F0E9D5-36D6-4B76-B669-BB1A12A70569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F0E9D5-36D6-4B76-B669-BB1A12A70569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F0E9D5-36D6-4B76-B669-BB1A12A70569}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73D850A5-BC7E-4943-AD95-C91D8CDDC642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D850A5-BC7E-4943-AD95-C91D8CDDC642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D850A5-BC7E-4943-AD95-C91D8CDDC642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D850A5-BC7E-4943-AD95-C91D8CDDC642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{294C5F00-CA60-4E29-86C7-1D7C28E62B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{294C5F00-CA60-4E29-86C7-1D7C28E62B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{294C5F00-CA60-4E29-86C7-1D7C28E62B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{294C5F00-CA60-4E29-86C7-1D7C28E62B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D81676BD-F3DE-4AFB-AB1A-004FC368CFB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D81676BD-F3DE-4AFB-AB1A-004FC368CFB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D81676BD-F3DE-4AFB-AB1A-004FC368CFB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D81676BD-F3DE-4AFB-AB1A-004FC368CFB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05A824B1-B82B-4106-AEB9-5A5065C5F8FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A824B1-B82B-4106-AEB9-5A5065C5F8FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A824B1-B82B-4106-AEB9-5A5065C5F8FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A824B1-B82B-4106-AEB9-5A5065C5F8FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
