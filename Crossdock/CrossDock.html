@@ -15,6 +15,7 @@
     <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="lib/jqwidgets/css/jqx.base.css" rel="stylesheet" />
 
 </head>
 
@@ -230,9 +231,9 @@
                                    
                                 </div>
                             </div>-->
-                            <table id="gridActiveShipments">
-                                
-                            </table>
+                            <div id="gridActiveShipments">
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -253,7 +254,7 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <div class="">
+                            <!--<div class="">
                                 <div class="row form-group">
                                     <div class="col-lg-12">
                                         <table class="table table-hover no-margins">
@@ -367,8 +368,10 @@
                                     </div>
 
                                 </div>
-                            </div>
+                            </div>-->
+                            <div id="gridDispatchedShipments">
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -695,7 +698,7 @@
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
     <script src="js/plugins/dataTables/datatables.min.js"></script>
-    <script src="js/plugins/jqGrid/jquery.jqGrid.min.js"></script>
+    <!--<script src="js/plugins/jqGrid/jquery.jqGrid.min.js"></script>-->
 
     <!-- Custom and plugin javascript -->
     <script src="js/inspinia.js"></script>
@@ -709,37 +712,59 @@
 
     <!-- Page-Level Scripts -->
     <script>
-        $.ajax('webservice.asmx/GetActiveShipments', {
-            async: false,
-            contentType: 'application/json',
-            type: 'POST',
-            success: function (data) {
-                $("#gridActiveShipments")[0].addJSONData(data.d);
-            },
-            error: function (data) {
-                alert('Error: ' + data.d);
-            }
-        });
+        //GetData = function () {
+        //    var aux;
+        //    $.ajax('webservice.asmx/GetActiveShipments', {
+        //        async: false,
+        //        contentType: 'application/json',
+        //        type: 'POST',
+        //        success: function (data) {
+        //            var aux = $.parseJSON(data.d);
+        //            //$("#gridActiveShipments").addJSONData(aux);
+        //        },
+        //        error: function (data) {
+        //            alert('Error: ' + data.d);
+        //        }
+        //    });
+        //    return aux;
+        //}
         
-        $("#gridActiveShipments").jqGrid({
-            datatype: 'jsonstring',
-            colNames: ['ID', 'Customer', 'Reference', 'Equipment(TU)', 'Carrier(TU)', 'Packages', 'ArrivalDate', 'Equipment(TL)', 'Carrier(TL)', 'CheckIn', 'Status'],
-            colModel: [
-                { name: "ID", index: "ID" },
-                { name: "Customer", index: "Customer" },
-                { name: "Reference", index: "Reference" },
-                { name: "Equipment(TU)", index: "Equipment(TU)" },
-                { name: "Carrier(TU)", index: "Carrier(TU)" },
-                { name: "Packages", index: "Packages" },
-                { name: "ArrivalDate", index: "ArrivalDate" },
-                { name: "Equipment(TL)", index: "Equipment(TL)" },
-                { name: "Carrier(TL)", index: "Carrier(TL)" },
-                { name: "CheckIn", index: "CheckIn" },
-                { name: "Status", index: "Status" }
-            ],
-            viewrecords: true
-        });
+        
+        //$("#gridActiveShipments").jqGrid({
+        //    url: GetData(),
+        //    datatype: 'json',
+        //    colNames: ['ID', 'Customer', 'Reference', 'Equipment(TU)', 'Carrier(TU)', 'Packages', 'ArrivalDate', 'Equipment(TL)', 'Carrier(TL)', 'CheckIn', 'Status'],
+        //    colModel: [
+        //        { name: "ID", index: "ID", width: 150, editable: true },
+        //        { name: "Customer", index: "Customer", width: 150, editable: true },
+        //        { name: "Reference", index: "Reference", width: 150, editable: true },
+        //        { name: "Equipment(TU)", index: "Equipment(TU)", width: 150, editable: true },
+        //        { name: "Carrier(TU)", index: "Carrier(TU)", width: 150, editable: true },
+        //        { name: "Packages", index: "Packages", width: 150, editable: true },
+        //        { name: "ArrivalDate", index: "ArrivalDate", width: 150, editable: true },
+        //        { name: "Equipment(TL)", index: "Equipment(TL)", width: 150, editable: true },
+        //        { name: "Carrier(TL)", index: "Carrier(TL)", width: 150, editable: true },
+        //        { name: "CheckIn", index: "CheckIn", width: 150, editable: true },
+        //        { name: "Status", index: "Status", width: 150, editable: true }
+        //    ]
+        //});
     </script>
-    <script src="js/ASN.js"></script>
+
+    <script src="lib/jqwidgets/jqxCore/jqxcore.js"></script>
+    <script src="lib/jqwidgets/jqxButtons/jqxbuttons.js"></script>
+    <script src="lib/jqwidgets/jqxScrollbar/jqxscrollbar.js"></script>
+    <script src="lib/jqwidgets/jqxMenu/jqxmenu.js"></script>
+    <script src="lib/jqwidgets/jqxGrid/jqxgrid.js"></script>
+    <script src="lib/jqwidgets/jqxGrid/jqxgrid.export.js"></script>
+    <script src="lib/jqwidgets/jqxGrid/jqxgrid.selection.js"></script>
+    <script src="lib/jqwidgets/jqxGrid/jqxgrid.edit.js"></script>
+    <script src="lib/jqwidgets/jqxGrid/jqxgrid.filter.js"></script>
+    <script src="lib/jqwidgets/jqxGrid/jqxgrid.sort.js"></script>
+    <script src="lib/jqwidgets/jqxData/jqxdata.js"></script>
+    <script src="lib/jqwidgets/jqxData/jqxdata.export.js"></script>
+    <script src="lib/jqwidgets/jqxNumberInput/jqxnumberinput.js"></script>
+
+
+    <script src="js/crossdock.js"></script>
 </body>
 </html>
