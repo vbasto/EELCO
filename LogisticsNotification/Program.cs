@@ -90,7 +90,7 @@ namespace LogisticsNotification
             conexIMEX.Close();
             
             //For testing
-            //receiptsArray.Add("431169,0000012781");
+            //receiptsArray.Add("436605,0000013066");
 
             /* LOOP THROUGH THE RECEIPTS ARRAY AND PROCESS EACH */
             foreach (string receipt in receiptsArray)
@@ -130,7 +130,7 @@ namespace LogisticsNotification
                     {
                         contacts = GetContactsFromLogistic(logistic, customer);                    
                     }
-                    /////contacts = "victor.basto@outlook.com"; // ConfigurationManager.AppSettings["CC"];
+                    ///contacts = "victor.basto@outlook.com"; // ConfigurationManager.AppSettings["CC"];
                     if (contacts.Trim() == "")
                     {
                         contacts = "shipping@uscustombroker.com";
