@@ -84,13 +84,26 @@ namespace LogisticsNotification
                 /* SAVE THE IDENTIFIED RECEIPT INTO AN ARRAY */
                 string receiptId = dataIMEX["ReceiptId"].ToString().Trim();
                 string receiptNo = dataIMEX["WhseReceiptNo"].ToString().Trim();
-                receiptsArray.Add(receiptId + "," + receiptNo);
+                //receiptsArray.Add(receiptId + "," + receiptNo);
             }
             dataIMEX.Close();
             conexIMEX.Close();
             
             //For testing
-            //receiptsArray.Add("436605,0000013066");
+            receiptsArray.Add("435179,0000012993");
+            receiptsArray.Add("435234,0000012999");
+            receiptsArray.Add("435551,0000013016");
+            receiptsArray.Add("435638,0000013023");
+            receiptsArray.Add("435644,0000013024");
+            receiptsArray.Add("435678,0000013026");
+            receiptsArray.Add("435832,0000013027");
+            receiptsArray.Add("435979,0000013036");
+            receiptsArray.Add("436049,0000013040");
+            receiptsArray.Add("436084,0000013043");
+            receiptsArray.Add("436380,0000013054");
+            receiptsArray.Add("436503,0000013058");
+            receiptsArray.Add("436560,0000013061");
+            receiptsArray.Add("436605,0000013066");
 
             /* LOOP THROUGH THE RECEIPTS ARRAY AND PROCESS EACH */
             foreach (string receipt in receiptsArray)
@@ -149,7 +162,7 @@ namespace LogisticsNotification
                         CreateMail(ref mail, equipment, contacts);
                     }                    
                     SendMail(mail);
-                    CreateTransaction(receiptNo, logistic, contacts, orders);
+                    //CreateTransaction(receiptNo, logistic, contacts, orders);
                 }
             }
         }
